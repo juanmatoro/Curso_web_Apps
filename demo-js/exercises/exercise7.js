@@ -1,6 +1,12 @@
 // 7. Crea una función que, al ser llamada, imprima por consola el resultado de la multiplicación de dos números introducidos como parámetros.
 
 const multiplicar = (a, b) => {
-  return a * b;
+  const resultado = a * b;
+
+  console.log(`El resultado de la multiplicación de ${a} y ${b} es: ${resultado}`); 
+  
+  
 };
-console.log(`La multiplicación de 7 y 3 es: ${multiplicar(7, 3)}`);
+
+multiplicar (5, 3); // Llamada de ejemplo a la función
+multiplicar (7, 4); // Llamada de ejemplo a la función

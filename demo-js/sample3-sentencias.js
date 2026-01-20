@@ -98,3 +98,23 @@ console.log(12 / 0); // Infinity
 console.log(0 / 12); // 0
 console.log(-12 / 0); // -Infinity
 console.log(0 / 0); // NaN
+
+// functions
+function mensajeBienvenida(nombre) {
+    return `¡Bienvenido, ${nombre}!`;
+}
+
+console.log(mensajeBienvenida('Ana')); // ¡Bienvenido, Ana!
+
+function render(text) {
+    console.log(text);
+}
+
+render(mensajeBienvenida('Luis')); // ¡Bienvenido, Luis!
+
+function sumaDosNumeros(num1, num2) {
+    const suma = num1 + num2;
+    return suma;
+}
+
+render(`El resultado es: ${sumaDosNumeros(7, 3)}`); // 10

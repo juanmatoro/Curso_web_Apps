@@ -1,6 +1,9 @@
 // 9. Crea una función que saque por consola el área de un rectángulo de dimensiones dadas como parámetro. (base, altura)
 const areaRectangulo = (base, altura) => {
-  return base * altura;
+  const area = base * altura;
+  console.log(`El area del rectangulo de base ${base} y altura ${altura} es: ${area}`);
 };
-console.log(`El área de un rectángulo de base 5 y altura 10 es: ${areaRectangulo(5, 10)}`);
+areaRectangulo(5, 10); // Llamada de ejemplo a la función
+areaRectangulo(7, 3); // Llamada de ejemplo a la función   
+areaRectangulo(4, 6); // Llamada de ejemplo a la función 
 

@@ -1,6 +1,11 @@
 // 8. Crea una función que imprima por consola el resultado de elevar al cubo un número dado como parámetro.
-const potencia = (base, exponente) => {
-  return Math.pow(base, exponente);
-};
-console.log(`2 elevado a la 3 es: ${potencia(2, 3)}`);
 
+
+const elevarAlCubo = (numero) => {
+    const resultado = numero ** 3;
+    console.log(`El resultado de elevar ${numero} al cubo es: ${resultado}`);
+};
+
+elevarAlCubo(2); // Llamada de ejemplo a la función
+elevarAlCubo(4); // Llamada de ejemplo a la función
+elevarAlCubo(5); // Llamada de ejemplo a la función
