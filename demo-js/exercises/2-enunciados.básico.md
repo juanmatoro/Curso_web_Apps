@@ -8,7 +8,7 @@
 
 3. Cambia ahora el valor de una de las dos variables e imprime por consola.
 
-4. Crea dos variable numéricas e imprime el resultado de sumarlas por consola.
+4.
 
 5. Declara dos variables de tipo string. Imprime por consola el resultado de concatenarlas.
 
