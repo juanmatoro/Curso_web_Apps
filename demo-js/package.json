@@ -1,0 +1,15 @@
+{
+  "name": "demo-js",
+  "version": "1.0.0",
+  "description": "Este es el programita de inicio a js",
+  "license": "ISC",
+  "author": "JuanmagToro",
+  "type": "module",
+  "main": "sample.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "prettier": {
+    "singleQuote": true
+  }
+}
