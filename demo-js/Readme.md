@@ -17,3 +17,6 @@ Expresiones. Operadores
 - Casos pintorescos de coercion
 - Coercion a boolean
 - Sentencias de control (ver 03)
+## 4. Functions
+sample4-funtions.js
+revisar ejercicios de 6 a 11

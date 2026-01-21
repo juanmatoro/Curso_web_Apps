@@ -1,28 +1,42 @@
 // 10. Crea una función que imprima por consola un número al azar entre 0 y 10.
-let semilla = 1;
-function aleatorioEntre0y10() {
-    semilla = (semilla * 3 + 7) % 11;
-    console.log(semilla);
-}
-console.log("Números aleatorios entre 0 y 10:");
-aleatorioEntre0y10(); // Llamada de ejemplo a la función
-aleatorioEntre0y10(); // Llamada de ejemplo a la función
-aleatorioEntre0y10(); // Llamada de ejemplo a la función
-aleatorioEntre0y10(); // Llamada de ejemplo a la función
-aleatorioEntre0y10(); // Llamada de ejemplo a la función
-aleatorioEntre0y10(); // Llamada de ejemplo a la función
-aleatorioEntre0y10(); // Llamada de ejemplo a la función
-aleatorioEntre0y10(); // Llamada de ejemplo a la función
-aleatorioEntre0y10(); // Llamada de ejemplo a la función
-aleatorioEntre0y10(); // Llamada de ejemplo a la función
 
-console.log("Números aleatorios entre 0 y 10 usando Math.random():");
-function aleatorio0y10(i = 0) {
-    if (i < 10) {
-        console.log(Math.floor(Math.random() * 11));
-        aleatorioEntre0y10(i + 1);
-    }
+/* 
+Math.floor(5.9999999) // 5
+Math.trunc(5.999999) // 5
+MAth.trunc(5.000001) // 6
+Math.round(5.6) //6 
+// */
+
+const randomNumber = () => {
+    return Math.floor(Math.random() * 11);
+};
+
+console.log(randomNumber());
+console.log(randomNumber());
+console.log(randomNumber());
+console.log(randomNumber());
+console.log(randomNumber());
+console.log(randomNumber());
+console.log(randomNumber());
+console.log(randomNumber());
+console.log(randomNumber());
+console.log(randomNumber());
+console.log(randomNumber());
+
+console.log('Primero segundo');
+function numberRand() {
+    return Math.floor(Math.random() * 11);
 }
-aleatorio0y10();
-aleatorio0y10();
-aleatorio0y10();
+
+console.log(numberRand());
+console.log(numberRand());
+console.log(numberRand());
+console.log(numberRand());
+console.log(numberRand());
+
+console.log('!construimos un bucle con 20 números random:');
+
+// Resolvemos con un bucle
+for (let i = 1; i <= 20; i++) {
+    console.log(i, randomNumber());
+}

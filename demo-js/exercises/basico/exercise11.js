@@ -6,3 +6,16 @@ que el usuario ha acertado, sino, imprime por consola que el usuario
 ha fallado seguido del número correcto */
 
 
+const randomNumber = () => {
+    return Math.floor(Math.random(1.10) * 11);
+};
+
+const pairorImpair = () => {
+    const random = randomNumber();
+    if (random % 2 === 0) {
+        console.log(`${random} es par`);
+    } else {
+        console.log(`${random} es impar`);
+    }
+};
+pairorImpair();
