@@ -17,6 +17,8 @@ while (i <= LIMIT) {
     console.log(i, randomNumber());
     i++;
 }
+
+
 console.log('Bucle for');
 for (let i = 0; i <= LIMIT; i++) {
     console.log(i, randomNumber());

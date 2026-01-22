@@ -8,4 +8,4 @@ const isPrime = (num) => {
 };}
 isPrime(7);
 isPrime(10);
-isPrime(13);
+isPrime(13); 
