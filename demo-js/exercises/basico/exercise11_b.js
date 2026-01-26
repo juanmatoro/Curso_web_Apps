@@ -113,7 +113,7 @@ const compareNumbers = (randomNumber, userNumber) => {
             // Usamos getHintMessage para obtener una pista con el número del usuario
             const hintMessage = getHintMessage(randomNumber, userNumber);
             console.log(hintMessage);
-            userNumber = getUserNumber();
+               userNumber = getUserNumber();
         }
     }
 };
