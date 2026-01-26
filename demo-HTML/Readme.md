@@ -137,3 +137,6 @@ indent_size = 2
   - Etiquetas. Case insensitive: minúsculas
   - Atributos. Universales o específicos
   - Comentarios
+
+## Validar html
+- https://validator.w3.org/

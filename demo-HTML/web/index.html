@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guía de HTML - Fundamentos</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f5f5f5;
+            color: #333;
+            line-height: 1.4;
+            font-size: 14px;
+        }
+        header.page-header {
+            background: linear-gradient(135deg, #8b4513, #a0522d);
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        header.page-header h1 {
+            color: white;
+            font-size: 2em;
+            margin-bottom: 5px;
+        }
+        header.page-header p {
+            opacity: 0.9;
+            font-size: 1em;
+        }
+        main {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            padding: 20px;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+        section {
+            background: white;
+            border-radius: 8px;
+            padding: 15px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            flex: 1 1 calc(50% - 15px);
+            min-width: 300px;
+        }
+        section.full-width {
+            flex: 1 1 100%;
+        }
+        .orden {
+            display: inline-block;
+            background: #8b4513;
+            color: white;
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 24px;
+            font-size: 0.8em;
+            margin-right: 8px;
+        }
+        h1, h2, h3, h4, h5, h6 {
+            color: #8b4513;
+            margin-bottom: 8px;
+        }
+        h2 { font-size: 1.4em; border-bottom: 2px solid #8b4513; padding-bottom: 5px; }
+        h3 { font-size: 1.1em; color: #555; }
+        ul, ol {
+            margin: 8px 0;
+            padding-left: 20px;
+        }
+        li {
+            margin-bottom: 4px;
+            font-size: 0.9em;
+        }
+        code {
+            background-color: #2d2d2d;
+            color: #f8f8f2;
+            padding: 1px 5px;
+            border-radius: 3px;
+            font-family: 'Consolas', 'Monaco', monospace;
+            font-size: 0.85em;
+        }
+        pre {
+            background: #2d2d2d;
+            color: #f8f8f2;
+            padding: 10px;
+            border-radius: 5px;
+            overflow-x: auto;
+            font-size: 0.85em;
+            margin: 10px 0;
+        }
+        .ejemplo {
+            background: #f9f9f9;
+            border: 1px dashed #ccc;
+            padding: 10px;
+            margin-top: 10px;
+            border-radius: 5px;
+        }
+        .ejemplo h1, .ejemplo h2, .ejemplo h3,
+        .ejemplo h4, .ejemplo h5, .ejemplo h6 {
+            margin: 2px 0;
+            border: none;
+            padding: 0;
+        }
+        a { color: #0066cc; }
+        img { max-width: 100%; height: auto; }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 10px;
+            font-size: 0.9em;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 6px 10px;
+            text-align: left;
+        }
+        th { background: #8b4513; color: white; }
+        tr:nth-child(even) { background: #f9f9f9; }
+        input, select, textarea, button {
+            padding: 5px 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 0.9em;
+        }
+        button {
+            background: #8b4513;
+            color: white;
+            cursor: pointer;
+        }
+        button:hover { background: #a0522d; }
+    </style>
+</head>
+<body>
+    <header class="page-header">
+        <h1>Guía de HTML - Fundamentos</h1>
+        <p>Los elementos esenciales para empezar a crear páginas web</p>
+    </header>
+
+    <main>
+        <!-- 1. ESTRUCTURA BÁSICA -->
+        <section class="full-width">
+            <h2><span class="orden">1</span>Estructura básica de HTML</h2>
+            <ul>
+                <li>Todo documento HTML comienza con <code>&lt;!DOCTYPE html&gt;</code> (declara HTML5)</li>
+                <li><code>&lt;html&gt;</code>: elemento raíz que contiene todo el documento</li>
+                <li><code>&lt;head&gt;</code>: metadatos, título, enlaces a CSS/JS (no visible)</li>
+                <li><code>&lt;body&gt;</code>: contenido visible de la página</li>
+            </ul>
+            <pre>&lt;!DOCTYPE html&gt;
+&lt;html lang="es"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;Mi página&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;!-- Contenido aquí --&gt;
+&lt;/body&gt;
+&lt;/html&gt;</pre>
+        </section>
+
+        <!-- 2. METADATOS -->
+        <section>
+            <h2><span class="orden">2</span>Metadatos (head)</h2>
+            <ul>
+                <li><code>&lt;meta charset="UTF-8"&gt;</code>: codificación de caracteres</li>
+                <li><code>&lt;meta name="viewport"&gt;</code>: responsive en móviles</li>
+                <li><code>&lt;title&gt;</code>: título en la pestaña del navegador</li>
+                <li><code>&lt;link&gt;</code>: enlaza CSS externos</li>
+                <li><code>&lt;script&gt;</code>: enlaza o incluye JavaScript</li>
+                <li><code>&lt;meta name="description"&gt;</code>: SEO</li>
+            </ul>
+            <div class="ejemplo">
+                <pre>&lt;link rel="stylesheet" href="estilos.css"&gt;
+&lt;script src="app.js"&gt;&lt;/script&gt;</pre>
+            </div>
+        </section>
+
+        <!-- 3. ENCABEZADOS -->
+        <section>
+            <h2><span class="orden">3</span>Encabezados</h2>
+            <ul>
+                <li>Definen la jerarquía del contenido</li>
+                <li>6 niveles: <code>&lt;h1&gt;</code> a <code>&lt;h6&gt;</code></li>
+                <li>Solo un <code>&lt;h1&gt;</code> por página (SEO)</li>
+                <li>No saltar niveles (h1 → h2 → h3...)</li>
+            </ul>
+            <div class="ejemplo">
+                <h1>H1 - Título principal</h1>
+                <h2>H2 - Secundario</h2>
+                <h3>H3 - Terciario</h3>
+                <h4>H4 - Cuarto nivel</h4>
+                <h5>H5 - Quinto nivel</h5>
+                <h6>H6 - Sexto nivel</h6>
+            </div>
+        </section>
+
+        <!-- 4. PÁRRAFOS Y TEXTO -->
+        <section>
+            <h2><span class="orden">4</span>Párrafos y texto</h2>
+            <ul>
+                <li><code>&lt;p&gt;</code>: párrafo de texto</li>
+                <li><code>&lt;br&gt;</code>: salto de línea</li>
+                <li><code>&lt;hr&gt;</code>: línea horizontal separadora</li>
+                <li><code>&lt;strong&gt;</code>: texto importante (negrita)</li>
+                <li><code>&lt;em&gt;</code>: énfasis (cursiva)</li>
+                <li><code>&lt;mark&gt;</code>: texto resaltado</li>
+                <li><code>&lt;small&gt;</code>: texto pequeño</li>
+            </ul>
+            <div class="ejemplo">
+                <p>Este es un párrafo con <strong>texto importante</strong> y con <em>énfasis</em>.</p>
+                <p>También puedes <mark>resaltar</mark> o usar <small>texto pequeño</small>.</p>
+                <hr>
+                <p>Separado por una línea horizontal.</p>
+            </div>
+        </section>
+
+        <!-- 5. ENLACES -->
+        <section>
+            <h2><span class="orden">5</span>Enlaces</h2>
+            <ul>
+                <li><code>&lt;a href="url"&gt;</code>: crea hipervínculos</li>
+                <li><code>href</code>: URL destino (relativa o absoluta)</li>
+                <li><code>target="_blank"</code>: abre en nueva pestaña</li>
+                <li><code>href="#id"</code>: ancla a elemento en la misma página</li>
+                <li><code>href="mailto:email"</code>: abre cliente de correo</li>
+                <li><code>href="tel:numero"</code>: llama en móviles</li>
+            </ul>
+            <div class="ejemplo">
+                <p><a href="https://www.google.com" target="_blank">Enlace externo</a></p>
+                <p><a href="#seccion-listas">Ancla interna</a></p>
+                <p><a href="mailto:hola@ejemplo.com">Enviar correo</a></p>
+            </div>
+        </section>
+
+        <!-- 6. IMÁGENES -->
+        <section>
+            <h2><span class="orden">6</span>Imágenes</h2>
+            <ul>
+                <li><code>&lt;img&gt;</code>: elemento vacío (sin cierre)</li>
+                <li><code>src</code>: ruta de la imagen (obligatorio)</li>
+                <li><code>alt</code>: texto alternativo (accesibilidad, obligatorio)</li>
+                <li><code>width</code> / <code>height</code>: dimensiones</li>
+                <li><code>loading="lazy"</code>: carga diferida (rendimiento)</li>
+                <li>Formatos: JPG, PNG, GIF, SVG, WebP</li>
+            </ul>
+            <div class="ejemplo">
+                <img src="./assets/img/web-612x612.jpg" alt="Imagen de ejemplo" style="width: 100px; border-radius: 5px;">
+                <pre>&lt;img src="foto.jpg" alt="Descripción" width="200"&gt;</pre>
+            </div>
+        </section>
+
+        <!-- 7. LISTAS -->
+        <section id="seccion-listas">
+            <h2><span class="orden">7</span>Listas</h2>
+            <ul>
+                <li><code>&lt;ul&gt;</code>: lista desordenada (viñetas)</li>
+                <li><code>&lt;ol&gt;</code>: lista ordenada (números)</li>
+                <li><code>&lt;li&gt;</code>: elemento de lista</li>
+                <li><code>&lt;dl&gt;</code>, <code>&lt;dt&gt;</code>, <code>&lt;dd&gt;</code>: lista de definiciones</li>
+                <li>Las listas pueden anidarse</li>
+            </ul>
+            <div class="ejemplo" style="display: flex; gap: 30px; flex-wrap: wrap;">
+                <div>
+                    <h3>Desordenada</h3>
+                    <ul><li>Item A</li><li>Item B</li><li>Item C</li></ul>
+                </div>
+                <div>
+                    <h3>Ordenada</h3>
+                    <ol><li>Primero</li><li>Segundo</li><li>Tercero</li></ol>
+                </div>
+                <div>
+                    <h3>Definiciones</h3>
+                    <dl>
+                        <dt>HTML</dt>
+                        <dd>Lenguaje de marcado</dd>
+                    </dl>
+                </div>
+            </div>
+        </section>
+
+        <!-- 8. DIV Y SPAN -->
+        <section>
+            <h2><span class="orden">8</span>Contenedores: Div y Span</h2>
+            <ul>
+                <li><code>&lt;div&gt;</code>: contenedor de bloque (agrupa secciones)</li>
+                <li><code>&lt;span&gt;</code>: contenedor en línea (dentro de texto)</li>
+                <li>No tienen significado semántico</li>
+                <li>Útiles para aplicar CSS y JavaScript</li>
+            </ul>
+            <div class="ejemplo">
+                <div style="border: 2px solid #8b4513; padding: 8px; border-radius: 4px;">
+                    Este es un <code>&lt;div&gt;</code> con un <span style="background: yellow; padding: 2px 4px;">span resaltado</span> dentro.
+                </div>
+            </div>
+        </section>
+
+        <!-- 9. TABLAS -->
+        <section>
+            <h2><span class="orden">9</span>Tablas</h2>
+            <ul>
+                <li><code>&lt;table&gt;</code>: contenedor de la tabla</li>
+                <li><code>&lt;thead&gt;</code>, <code>&lt;tbody&gt;</code>, <code>&lt;tfoot&gt;</code>: secciones</li>
+                <li><code>&lt;tr&gt;</code>: fila (table row)</li>
+                <li><code>&lt;th&gt;</code>: celda de encabezado</li>
+                <li><code>&lt;td&gt;</code>: celda de datos</li>
+                <li><code>colspan</code> / <code>rowspan</code>: combinar celdas</li>
+            </ul>
+            <div class="ejemplo">
+                <table>
+                    <thead>
+                        <tr><th>Producto</th><th>Precio</th><th>Stock</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>Laptop</td><td>999€</td><td>15</td></tr>
+                        <tr><td>Mouse</td><td>25€</td><td>50</td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- 10. FORMULARIOS -->
+        <section>
+            <h2><span class="orden">10</span>Formularios</h2>
+            <ul>
+                <li><code>&lt;form&gt;</code>: contenedor del formulario</li>
+                <li><code>&lt;input&gt;</code>: campo de entrada (text, email, password, number, etc.)</li>
+                <li><code>&lt;label&gt;</code>: etiqueta asociada al input (accesibilidad)</li>
+                <li><code>&lt;textarea&gt;</code>: área de texto multilínea</li>
+                <li><code>&lt;select&gt;</code> + <code>&lt;option&gt;</code>: lista desplegable</li>
+                <li><code>&lt;button&gt;</code>: botón de acción</li>
+            </ul>
+            <div class="ejemplo">
+                <form onsubmit="return false;">
+                    <p>
+                        <label for="nombre">Nombre:</label>
+                        <input type="text" id="nombre" placeholder="Tu nombre">
+                    </p>
+                    <p>
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" placeholder="tu@email.com">
+                    </p>
+                    <p>
+                        <label for="pais">País:</label>
+                        <select id="pais">
+                            <option value="">Selecciona...</option>
+                            <option value="es">España</option>
+                            <option value="mx">México</option>
+                            <option value="ar">Argentina</option>
+                        </select>
+                    </p>
+                    <p><button type="submit">Enviar</button></p>
+                </form>
+            </div>
+        </section>
+
+        <!-- 11. TIPOS DE INPUT -->
+        <section>
+            <h2><span class="orden">11</span>Tipos de Input</h2>
+            <ul>
+                <li><code>text</code>, <code>password</code>, <code>email</code>, <code>number</code></li>
+                <li><code>tel</code>, <code>url</code>, <code>date</code>, <code>time</code></li>
+                <li><code>checkbox</code>, <code>radio</code></li>
+                <li><code>file</code>, <code>color</code>, <code>range</code></li>
+                <li>Atributos: <code>required</code>, <code>placeholder</code>, <code>disabled</code></li>
+            </ul>
+            <div class="ejemplo">
+                <p><input type="checkbox" id="check"> <label for="check">Checkbox</label></p>
+                <p><input type="radio" name="opcion" id="r1"> <label for="r1">Opción A</label>
+                   <input type="radio" name="opcion" id="r2"> <label for="r2">Opción B</label></p>
+                <p><input type="date"></p>
+                <p><input type="color"> <input type="range" min="0" max="100"></p>
+            </div>
+        </section>
+
+        <!-- 12. ELEMENTOS SEMÁNTICOS -->
+        <section>
+            <h2><span class="orden">12</span>Elementos semánticos</h2>
+            <ul>
+                <li><code>&lt;header&gt;</code>: encabezado de página/sección</li>
+                <li><code>&lt;nav&gt;</code>: navegación principal</li>
+                <li><code>&lt;main&gt;</code>: contenido principal (único)</li>
+                <li><code>&lt;article&gt;</code>: contenido independiente</li>
+                <li><code>&lt;section&gt;</code>: sección temática</li>
+                <li><code>&lt;aside&gt;</code>: contenido relacionado (sidebar)</li>
+                <li><code>&lt;footer&gt;</code>: pie de página/sección</li>
+            </ul>
+            <div class="ejemplo">
+                <pre>&lt;header&gt;Logo y navegación&lt;/header&gt;
+&lt;main&gt;
+  &lt;article&gt;Contenido principal&lt;/article&gt;
+  &lt;aside&gt;Sidebar&lt;/aside&gt;
+&lt;/main&gt;
+&lt;footer&gt;Copyright&lt;/footer&gt;</pre>
+            </div>
+        </section>
+
+        <!-- 13. MULTIMEDIA -->
+        <section>
+            <h2><span class="orden">13</span>Multimedia</h2>
+            <ul>
+                <li><code>&lt;video&gt;</code>: insertar vídeo</li>
+                <li><code>&lt;audio&gt;</code>: insertar audio</li>
+                <li><code>&lt;source&gt;</code>: múltiples formatos</li>
+                <li>Atributos: <code>controls</code>, <code>autoplay</code>, <code>loop</code>, <code>muted</code></li>
+                <li><code>&lt;iframe&gt;</code>: incrustar contenido externo (YouTube, mapas)</li>
+            </ul>
+            <div class="ejemplo">
+                <pre>&lt;video controls width="300"&gt;
+  &lt;source src="video.mp4" type="video/mp4"&gt;
+&lt;/video&gt;
+
+&lt;audio controls&gt;
+  &lt;source src="audio.mp3" type="audio/mpeg"&gt;
+&lt;/audio&gt;
+
+&lt;iframe src="https://youtube.com/embed/ID"&gt;&lt;/iframe&gt;</pre>
+            </div>
+        </section>
+
+        <!-- 14. ATRIBUTOS GLOBALES -->
+        <section>
+            <h2><span class="orden">14</span>Atributos globales</h2>
+            <ul>
+                <li><code>id</code>: identificador único</li>
+                <li><code>class</code>: clase(s) CSS</li>
+                <li><code>style</code>: estilos en línea</li>
+                <li><code>title</code>: tooltip al pasar el mouse</li>
+                <li><code>data-*</code>: datos personalizados</li>
+                <li><code>hidden</code>: oculta el elemento</li>
+                <li><code>lang</code>: idioma del contenido</li>
+            </ul>
+            <div class="ejemplo">
+                <p title="Este es un tooltip">Pasa el mouse aquí</p>
+                <pre>&lt;div id="unico" class="caja grande" data-info="valor"&gt;</pre>
+            </div>
+        </section>
+
+        <!-- 15. BUENAS PRÁCTICAS -->
+        <section class="full-width">
+            <h2><span class="orden">15</span>Buenas prácticas</h2>
+            <div style="display: flex; gap: 20px; flex-wrap: wrap;">
+                <ul style="flex: 1; min-width: 250px;">
+                    <li>Usar siempre <code>&lt;!DOCTYPE html&gt;</code></li>
+                    <li>Declarar <code>lang</code> en <code>&lt;html&gt;</code></li>
+                    <li>Incluir <code>charset</code> y <code>viewport</code></li>
+                    <li>Usar elementos semánticos</li>
+                    <li>Siempre incluir <code>alt</code> en imágenes</li>
+                </ul>
+                <ul style="flex: 1; min-width: 250px;">
+                    <li>Asociar <code>&lt;label&gt;</code> a cada input</li>
+                    <li>Validar HTML (validator.w3.org)</li>
+                    <li>Indentar correctamente el código</li>
+                    <li>Separar estructura (HTML), estilo (CSS) y comportamiento (JS)</li>
+                    <li>Mantener el código limpio y comentado</li>
+                </ul>
+            </div>
+        </section>
+    </main>
+</body>
+</html>
