@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tema 3: Enlaces e Im&aacute;genes - Apuntes HTML</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="../assets/css/styles.css">
+</head>
+<body class="bg-gray-100 text-gray-800 font-sans text-sm leading-relaxed">
+
+    <header class="bg-gradient-to-br from-amber-900 to-amber-800 text-white py-6 px-5 text-center">
+        <h1 class="text-3xl font-bold mb-1">Tema 3: Enlaces e Im&aacute;genes</h1>
+        <p class="opacity-90">Hiperv&iacute;nculos y contenido visual en HTML</p>
+    </header>
+
+    <nav class="bg-white border-b border-gray-200 px-5 py-2.5 text-sm max-w-6xl mx-auto">
+        <a href="../index.html" class="text-amber-900 no-underline hover:underline">&Iacute;ndice</a>
+        <span class="text-gray-400 mx-1">&rsaquo;</span>
+        HTML
+        <span class="text-gray-400 mx-1">&rsaquo;</span>
+        Tema 3
+    </nav>
+
+    <main class="flex flex-wrap gap-4 p-5 max-w-6xl mx-auto">
+        <!-- ENLACES -->
+        <section class="bg-white rounded-lg p-4 shadow basis-full md:basis-[calc(50%-0.5rem)]">
+            <h2 class="text-xl font-bold text-amber-900 border-b-2 border-amber-900 pb-1 mb-3">
+                <span class="orden">5</span>Enlaces
+            </h2>
+            <ul class="list-disc pl-5 space-y-1 text-sm">
+                <li><code class="bg-gray-800 text-gray-100 px-1.5 rounded text-xs font-mono">&lt;a href="url"&gt;</code>: crea hiperv&iacute;nculos</li>
+                <li><code class="bg-gray-800 text-gray-100 px-1.5 rounded text-xs font-mono">href</code>: URL destino (relativa o absoluta)</li>
+                <li><code class="bg-gray-800 text-gray-100 px-1.5 rounded text-xs font-mono">target="_blank"</code>: abre en nueva pesta&ntilde;a</li>
+                <li><code class="bg-gray-800 text-gray-100 px-1.5 rounded text-xs font-mono">href="#id"</code>: ancla a elemento en la misma p&aacute;gina</li>
+                <li><code class="bg-gray-800 text-gray-100 px-1.5 rounded text-xs font-mono">href="mailto:email"</code>: abre cliente de correo</li>
+                <li><code class="bg-gray-800 text-gray-100 px-1.5 rounded text-xs font-mono">href="tel:numero"</code>: llama en m&oacute;viles</li>
+            </ul>
+            <div class="bg-gray-50 border border-dashed border-gray-300 p-3 mt-3 rounded-md">
+                <p><a href="https://www.google.com" target="_blank" class="text-blue-600 hover:underline">Enlace externo</a></p>
+                <p><a href="#seccion-imagenes" class="text-blue-600 hover:underline">Ancla interna (ir a im&aacute;genes)</a></p>
+                <p><a href="mailto:hola@ejemplo.com" class="text-blue-600 hover:underline">Enviar correo</a></p>
+            </div>
+        </section>
+
+        <!-- IMÁGENES -->
+        <section id="seccion-imagenes" class="bg-white rounded-lg p-4 shadow basis-full md:basis-[calc(50%-0.5rem)]">
+            <h2 class="text-xl font-bold text-amber-900 border-b-2 border-amber-900 pb-1 mb-3">
+                <span class="orden">6</span>Im&aacute;genes
+            </h2>
+            <ul class="list-disc pl-5 space-y-1 text-sm">
+                <li><code class="bg-gray-800 text-gray-100 px-1.5 rounded text-xs font-mono">&lt;img&gt;</code>: elemento vac&iacute;o (sin cierre)</li>
+                <li><code class="bg-gray-800 text-gray-100 px-1.5 rounded text-xs font-mono">src</code>: ruta de la imagen (obligatorio)</li>
+                <li><code class="bg-gray-800 text-gray-100 px-1.5 rounded text-xs font-mono">alt</code>: texto alternativo (accesibilidad, obligatorio)</li>
+                <li><code class="bg-gray-800 text-gray-100 px-1.5 rounded text-xs font-mono">width</code> / <code class="bg-gray-800 text-gray-100 px-1.5 rounded text-xs font-mono">height</code>: dimensiones</li>
+                <li><code class="bg-gray-800 text-gray-100 px-1.5 rounded text-xs font-mono">loading="lazy"</code>: carga diferida (rendimiento)</li>
+                <li>Formatos: JPG, PNG, GIF, SVG, WebP</li>
+            </ul>
+            <div class="bg-gray-50 border border-dashed border-gray-300 p-3 mt-3 rounded-md">
+                <img src="../assets/img/web-612x612.jpg" alt="Imagen de ejemplo" class="w-24 rounded">
+                <pre class="bg-gray-800 text-gray-100 p-3 rounded-md overflow-x-auto text-xs mt-2">&lt;img src="foto.jpg" alt="Descripci&oacute;n" width="200"&gt;</pre>
+            </div>
+        </section>
+    </main>
+
+    <nav class="flex justify-between items-center max-w-6xl mx-auto mt-5 px-5 pb-5">
+        <a href="tema2-texto.html" class="inline-flex items-center gap-1.5 px-4 py-2 bg-amber-900 text-white no-underline rounded text-xs hover:bg-amber-800">&larr; Tema 2</a>
+        <a href="../index.html" class="inline-flex items-center gap-1.5 px-4 py-2 bg-amber-900 text-white no-underline rounded text-xs hover:bg-amber-800">&uarr; Volver al &iacute;ndice</a>
+        <a href="tema4-listas.html" class="inline-flex items-center gap-1.5 px-4 py-2 bg-amber-900 text-white no-underline rounded text-xs hover:bg-amber-800">Tema 4 &rarr;</a>
+    </nav>
+
+    <footer class="text-center py-5 text-gray-400 text-xs border-t border-gray-200 mt-4">
+        <p>Apuntes HTML &mdash; Tema 3 de 11</p>
+    </footer>
+</body>
+</html>
