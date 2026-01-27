@@ -1,16 +1,19 @@
 {
   "name": "demo-html",
   "version": "1.0.0",
-  "description": "ELABORACIÓN DE DOCUMENTOS WEB MEDIANTE LENGUAJES DE MARCAS Código: UF1841 Duración: 60 horas (12 días) Centro de Formación Digital Aolcobendas",
+  "description": "ELABORACIÓN DE DOCUMENTOS WEB MEDIANTE LENGUAJES DE MARCAS Código: UF1841 Duración: 60 horas (12 días) Centro de Formación Digital Alcobendas",
   "license": "ISC",
   "author": "",
-  "type": "commonjs",
+  "type": "module",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
-  "prettier":{
+  "prettier": {
     "singleQuote": true
+  },
+  "dependencies": {
+    "live-server": "^1.2.2"
   }
 }
