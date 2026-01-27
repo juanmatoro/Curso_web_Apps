@@ -22,10 +22,26 @@
         Tema 8
     </nav>
 
+    <nav class="bg-white border-b border-gray-200 px-5 py-2.5 max-w-6xl mx-auto">
+        <p class="text-xs text-gray-500 mb-1.5 font-semibold uppercase tracking-wide">En este tema</p>
+        <div class="flex flex-wrap gap-1.5">
+            <a href="#atributos-globales" class="text-xs px-2.5 py-1 bg-amber-50 text-amber-900 rounded-full hover:bg-amber-100 no-underline border border-amber-200">Atributos globales</a>
+            <a href="#id-class" class="text-xs px-2.5 py-1 bg-amber-50 text-amber-900 rounded-full hover:bg-amber-100 no-underline border border-amber-200">id y class</a>
+            <a href="#style-css" class="text-xs px-2.5 py-1 bg-amber-50 text-amber-900 rounded-full hover:bg-amber-100 no-underline border border-amber-200">style / CSS inline</a>
+            <a href="#title-tooltip" class="text-xs px-2.5 py-1 bg-amber-50 text-amber-900 rounded-full hover:bg-amber-100 no-underline border border-amber-200">title / tooltip</a>
+            <a href="#data-personalizados" class="text-xs px-2.5 py-1 bg-amber-50 text-amber-900 rounded-full hover:bg-amber-100 no-underline border border-amber-200">data-*</a>
+            <a href="#internacionalizacion" class="text-xs px-2.5 py-1 bg-amber-50 text-amber-900 rounded-full hover:bg-amber-100 no-underline border border-amber-200">Internacionalizaci&oacute;n</a>
+            <a href="#interaccion" class="text-xs px-2.5 py-1 bg-amber-50 text-amber-900 rounded-full hover:bg-amber-100 no-underline border border-amber-200">Interacci&oacute;n</a>
+            <a href="#eventos" class="text-xs px-2.5 py-1 bg-amber-50 text-amber-900 rounded-full hover:bg-amber-100 no-underline border border-amber-200">Eventos (on*)</a>
+            <a href="#buenas-practicas" class="text-xs px-2.5 py-1 bg-amber-50 text-amber-900 rounded-full hover:bg-amber-100 no-underline border border-amber-200">Buenas pr&aacute;cticas</a>
+            <a href="#checklist" class="text-xs px-2.5 py-1 bg-amber-50 text-amber-900 rounded-full hover:bg-amber-100 no-underline border border-amber-200">Checklist</a>
+        </div>
+    </nav>
+
     <main class="flex flex-col gap-4 p-5 max-w-6xl mx-auto">
 
         <!-- 8.1 VISIÓN GENERAL -->
-        <section class="bg-white rounded-lg p-5 shadow">
+        <section id="atributos-globales" class="bg-white rounded-lg p-5 shadow">
             <h2 class="text-xl font-bold text-amber-900 border-b-2 border-amber-900 pb-1 mb-3">
                 <span class="orden">8.1</span>&iquest;Qu&eacute; son los atributos globales?
             </h2>
@@ -63,7 +79,7 @@
         </section>
 
         <!-- 8.2 ID Y CLASS -->
-        <section class="bg-white rounded-lg p-5 shadow">
+        <section id="id-class" class="bg-white rounded-lg p-5 shadow">
             <h2 class="text-xl font-bold text-amber-900 border-b-2 border-amber-900 pb-1 mb-3">
                 <span class="orden">8.2</span>id y class
             </h2>
@@ -145,7 +161,7 @@
         </section>
 
         <!-- 8.3 STYLE Y CSS INLINE -->
-        <section class="bg-white rounded-lg p-5 shadow">
+        <section id="style-css" class="bg-white rounded-lg p-5 shadow">
             <h2 class="text-xl font-bold text-amber-900 border-b-2 border-amber-900 pb-1 mb-3">
                 <span class="orden">8.3</span>style &mdash; CSS en l&iacute;nea
             </h2>
@@ -224,7 +240,7 @@
         </section>
 
         <!-- 8.4 TITLE Y TOOLTIP -->
-        <section class="bg-white rounded-lg p-5 shadow">
+        <section id="title-tooltip" class="bg-white rounded-lg p-5 shadow">
             <h2 class="text-xl font-bold text-amber-900 border-b-2 border-amber-900 pb-1 mb-3">
                 <span class="orden">8.4</span>title &mdash; Tooltip informativo
             </h2>
@@ -259,7 +275,7 @@
         </section>
 
         <!-- 8.5 DATA-* -->
-        <section class="bg-white rounded-lg p-5 shadow">
+        <section id="data-personalizados" class="bg-white rounded-lg p-5 shadow">
             <h2 class="text-xl font-bold text-amber-900 border-b-2 border-amber-900 pb-1 mb-3">
                 <span class="orden">8.5</span>data-* &mdash; Atributos personalizados
             </h2>
@@ -347,7 +363,7 @@ art.getAttribute('<span class="text-yellow-300">data-id</span>'); // "42"</pre>
         </section>
 
         <!-- 8.6 INTERNACIONALIZACIÓN -->
-        <section class="bg-white rounded-lg p-5 shadow">
+        <section id="internacionalizacion" class="bg-white rounded-lg p-5 shadow">
             <h2 class="text-xl font-bold text-amber-900 border-b-2 border-amber-900 pb-1 mb-3">
                 <span class="orden">8.6</span>Internacionalizaci&oacute;n: lang, dir, translate
             </h2>
@@ -405,7 +421,7 @@ art.getAttribute('<span class="text-yellow-300">data-id</span>'); // "42"</pre>
         </section>
 
         <!-- 8.7 INTERACCIÓN -->
-        <section class="bg-white rounded-lg p-5 shadow">
+        <section id="interaccion" class="bg-white rounded-lg p-5 shadow">
             <h2 class="text-xl font-bold text-amber-900 border-b-2 border-amber-900 pb-1 mb-3">
                 <span class="orden">8.7</span>Atributos de interacci&oacute;n
             </h2>
@@ -514,7 +530,7 @@ art.getAttribute('<span class="text-yellow-300">data-id</span>'); // "42"</pre>
         </section>
 
         <!-- 8.8 ATRIBUTOS DE EVENTO -->
-        <section class="bg-white rounded-lg p-5 shadow">
+        <section id="eventos" class="bg-white rounded-lg p-5 shadow">
             <h2 class="text-xl font-bold text-amber-900 border-b-2 border-amber-900 pb-1 mb-3">
                 <span class="orden">8.8</span>Atributos de evento (on*)
             </h2>
@@ -585,7 +601,7 @@ document
         </section>
 
         <!-- 8.9 BUENAS PRÁCTICAS -->
-        <section class="bg-white rounded-lg p-5 shadow">
+        <section id="buenas-practicas" class="bg-white rounded-lg p-5 shadow">
             <h2 class="text-xl font-bold text-amber-900 border-b-2 border-amber-900 pb-1 mb-3">
                 <span class="orden">8.9</span>Buenas pr&aacute;cticas para escribir HTML
             </h2>
@@ -766,7 +782,7 @@ document
         </section>
 
         <!-- 8.10 CHECKLIST -->
-        <section class="bg-white rounded-lg p-5 shadow">
+        <section id="checklist" class="bg-white rounded-lg p-5 shadow">
             <h2 class="text-xl font-bold text-amber-900 border-b-2 border-amber-900 pb-1 mb-3">
                 <span class="orden">8.10</span>Checklist de buenas pr&aacute;cticas
             </h2>
