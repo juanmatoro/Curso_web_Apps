@@ -5,12 +5,12 @@
     display: inline-block;
     background: #8b4513;
     color: white;
-    width: 24px;
-    height: 24px;
+    width: 26px;
+    height: 26px;
     border-radius: 50%;
     text-align: center;
-    line-height: 24px;
-    font-size: 0.8em;
+    line-height: 26px;
+    font-size: 0.6em;
     margin-right: 8px;
 }
 
